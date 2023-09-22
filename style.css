@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Haken Grotesk', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+}
+
+main {
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    margin-top: 100px;
+    min-height: 50vh;
+    min-width: 40vw;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(251, 251, 251, 0.327);
+}
+
+div#content-left {
+    border-radius: 40px;
+    min-height: 100%;
+    min-width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-image: linear-gradient(to top, hsl(241, 62%, 39%), hsl(252, 100%, 67%));
+    color: white;
+}
+
+#circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0))
+}
+
+div#circle h1 {
+    font-size: 4rem;
+}
+
+div#circle h4 {
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+#title-left {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#great {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.09rem;
+    width: 60%;
+    margin-top: 5%;
+}
+
+/* INICIO DA SEÇÃO DA DIREITA*/
+
+div#content-right {
+    min-height: 100%;
+    min-width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#title-right {
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+table {
+    min-width: 80%;
+    margin-top: 5%;
+    margin-bottom: 12%;
+    font-size: 1.2rem;
+}
+
+.icon {
+    padding-right: 5px;
+}
+
+.right {
+    text-align: right;
+    font-weight: 100;
+}
+
+.negrito {
+    font-weight: 900;
+}
+
+#reaction {
+    color: hsl(0, 100%, 67%);
+}
+
+#memory {
+    color: hsl(39, 100%, 56%);
+}
+
+#verbal {
+    color: hsl(166, 100%, 37%)
+}
+
+#visual {
+    color: hsl(234, 85%, 45%)
+}
+
+td {
+    text-align: left;
+    padding-top: 30px;     
+}
+
+button {
+    min-width: 70%;
+    min-height: 50px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: white;
+    background-color: hsl(224, 30%, 27%);
+    border: none;
+    position: relative;
+    z-index: 1;
+}
+
+button::before {
+    background-image: linear-gradient(to top, hsl(241, 62%, 39%), hsl(252, 100%, 67%));
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+    border-radius: 25px;
+}
+
+button:hover::before {
+    opacity: 1;
+    border-radius: 25px;
+}
+
+
+img {
+    width: 25px;
+    height: 25px;
+}
+
+@media (max-width: 745px) {
+
+    main {
+        flex-direction: column;
+        min-width: 290px;
+        margin-top: 0;
+        padding-top: 0;
+        border-radius: 0;
+    }
+
+    div#content-left {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        min-width: 290px;
+    }
+
+    div#content-right {
+        min-width: 290px;
+        
+    }
+
+    
+
+}
